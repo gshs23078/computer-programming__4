@@ -17,7 +17,7 @@ int main(){
 		else if(str[i]=='{')
 			st.push(3);
 		else if(str[i]==')'){
-			if(st.empty() || (st.size() && st.top()==1))
+			if(st.size() && st.top()==1)
 				st.pop();
 			else{
 				ans=false;
@@ -25,7 +25,7 @@ int main(){
 			}
 		}
 		else if(str[i]==']'){
-			if(st.empty() || (st.size() && st.top()==2))
+			if(st.size() && st.top()==2)
 				st.pop();
 			else{
 				ans=false;
@@ -33,7 +33,7 @@ int main(){
 			}
 		}
 		else if(str[i]=='}'){
-			if(st.empty() || (st.size() && st.top()==3))
+			if(st.size() && st.top()==3)
 				st.pop();
 			else{
 				ans=false;
